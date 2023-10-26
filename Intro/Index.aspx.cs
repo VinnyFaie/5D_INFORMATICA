@@ -18,5 +18,15 @@ namespace Intro
                 lblState.Text = "Postback della pagina. La pagina ha ricaricato se stessa!";
             }
         }
+
+        protected void BtnInvia_Click(object sender, EventArgs e)
+        {
+            if(txtUser.Text !="" && txtPwd.Text != "")
+            {
+                Session["nome"] = txtUser.Text.Trim();
+                Session["pwd"] = txtPwd.Text.Trim();
+                Response.Redirect("registrazione.aspx?sesso="+cboSex.Text);
+            }
+        }
     }
 }

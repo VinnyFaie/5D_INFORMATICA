@@ -9,7 +9,13 @@
     <title>Sito Web APS.Net</title>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server"> <%-- action="registrazione.aspx" method="get"
+        
+        Devo anche non avere l'action con il method per fare in modo che la mia funzione fatta sul CS
+        funzioni. 
+        
+        
+        --%>
         <div class="container text-center">
             <asp:Label ID="lblTitolo" runat="server" Text=""></asp:Label>
 
@@ -59,16 +65,31 @@
 
         <div class="bg-warning p-3 mt-2 row">  
             <div class="col-sm-3">
-                <asp:Button Text="Invia dati" runat="server" class="btn btn-success" />
+                <asp:Button Text="Invia dati" runat="server" class="btn btn-success" OnClick="BtnInvia_Click" />
             </div>
 
-                        <div class="col-sm-3">
+            <div class="col-sm-3">
+                <%-- La session è stata settata solo sull'altro bottone, quindi per questo dovremo inserirlo anche su
+                    Questo bottone.
+                
+                --%>
+                <asp:Button ID="btnAspSubmit" runat="server" Text="Button ASP Submit" type="submit" class="btn btn-info"/>
             </div>
 
-                        <div class="col-sm-3">
+            <div class="col-sm-3">
+                <%--
+                    La stesso cosa succede anche con questo bottone, perché TUTTI i bottoni di ASP net sono di tipo submit.    
+                --%>
+                <asp:Button ID="Button1" runat="server" Text="Button ASP" class="btn btn-primary"/>
+
             </div>
 
-                        <div class="col-sm-3">
+            <div class="col-sm-3">
+                <%--
+                    Lavora come gli altri due.    
+                --%>
+                <input type="submit" name="name" value="Submit Tradizionale" class="btn btn-dark"/>
+
             </div>
 
 

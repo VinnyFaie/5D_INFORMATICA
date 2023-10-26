@@ -11,7 +11,7 @@ namespace Intro
 {
 
 
-    public partial class Index
+    public partial class registrazione
     {
 
         /// <summary>
@@ -24,13 +24,31 @@ namespace Intro
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Controllo lblTitolo.
+        /// Controllo lblBenvenuto.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTitolo;
+        protected global::System.Web.UI.WebControls.Label lblBenvenuto;
+
+        /// <summary>
+        /// Controllo lblIntest.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblIntest;
+
+        /// <summary>
+        /// Controllo lblNomeIntest.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNomeIntest;
 
         /// <summary>
         /// Controllo lblUser.
@@ -42,75 +60,57 @@ namespace Intro
         protected global::System.Web.UI.WebControls.Label lblUser;
 
         /// <summary>
-        /// Controllo txtUser.
+        /// Controllo lblPwdIntest.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUser;
+        protected global::System.Web.UI.WebControls.Label lblPwdIntest;
 
         /// <summary>
-        /// Controllo lblPassword.
+        /// Controllo lblPwd.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPassword;
+        protected global::System.Web.UI.WebControls.Label lblPwd;
 
         /// <summary>
-        /// Controllo txtPwd.
+        /// Controllo lblGenderIntest.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPwd;
+        protected global::System.Web.UI.WebControls.Label lblGenderIntest;
 
         /// <summary>
-        /// Controllo lblSesso.
+        /// Controllo lblGender.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSesso;
+        protected global::System.Web.UI.WebControls.Label lblGender;
 
         /// <summary>
-        /// Controllo cboSex.
+        /// Controllo lblSessionIntest.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cboSex;
+        protected global::System.Web.UI.WebControls.Label lblSessionIntest;
 
         /// <summary>
-        /// Controllo btnAspSubmit.
+        /// Controllo lblSessionId.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAspSubmit;
-
-        /// <summary>
-        /// Controllo Button1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
-
-        /// <summary>
-        /// Controllo lblState.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblState;
+        protected global::System.Web.UI.WebControls.Label lblSessionId;
     }
 }
