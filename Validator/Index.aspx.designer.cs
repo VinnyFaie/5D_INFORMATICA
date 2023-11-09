@@ -24,13 +24,13 @@ namespace Validator
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Controllo Label1.
+        /// Controllo lblCognome.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblCognome;
 
         /// <summary>
         /// Controllo txtCognome.
@@ -123,22 +123,22 @@ namespace Validator
         protected global::System.Web.UI.WebControls.TextBox txtPwd;
 
         /// <summary>
-        /// Controllo lblPwd2.
+        /// Controllo lblConfPwd.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPwd2;
+        protected global::System.Web.UI.WebControls.Label lblConfPwd;
 
         /// <summary>
-        /// Controllo txtPwd2.
+        /// Controllo txtConfPwd.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPwd2;
+        protected global::System.Web.UI.WebControls.TextBox txtConfPwd;
 
         /// <summary>
         /// Controllo CVPassword.
@@ -148,6 +148,69 @@ namespace Validator
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CompareValidator CVPassword;
+
+        /// <summary>
+        /// Controllo lblRobot.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblRobot;
+
+        /// <summary>
+        /// Controllo txtRobot.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtRobot;
+
+        /// <summary>
+        /// Controllo CVRobot.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CVRobot;
+
+        /// <summary>
+        /// Controllo lblCustom.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCustom;
+
+        /// <summary>
+        /// Controllo txtCustom.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCustom;
+
+        /// <summary>
+        /// Controllo CustVal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustVal;
+
+        /// <summary>
+        /// Controllo VS.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary VS;
 
         /// <summary>
         /// Controllo btnInvia.

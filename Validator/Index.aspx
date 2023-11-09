@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <title>Validator</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
         Controllare le variabili in un modo simile alle REGEX --%>
 
 
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" action="pagReg.aspx" method="get">
         <div class="containter">
 
 
@@ -24,11 +24,11 @@
 
                 <%-- REQUIREDFIELD --%>
                 <div class="col-sm-3 bg-info">
-                    <asp:Label ID="Label1" runat="server" Text="Cognome: "></asp:Label>
+                    <asp:Label ID="lblCognome" runat="server"  Text="Cognome: "></asp:Label>
                 </div>
 
                 <div class="col-sm-5 bg-primary">
-                    <asp:TextBox ID="txtCognome" runat="server" class="form-control w-100"></asp:TextBox>
+                    <asp:TextBox ID="txtCognome" name="txtCognome" runat="server" class="form-control w-100"></asp:TextBox>
                 </div>
 
                 <div class="col-sm-4 bg-success">
@@ -44,7 +44,7 @@
                 </div>
 
                 <div class="col-sm-5 bg-primary">
-                    <asp:TextBox ID="txtEta" runat="server" class="form-control w-100"></asp:TextBox>
+                    <asp:TextBox ID="txtEta" runat="server" name="txtEta" class="form-control w-100"></asp:TextBox>
                 </div>
 
                 <div class="col-sm-4 bg-success">
@@ -59,7 +59,7 @@
                 </div>
 
                 <div class="col-sm-5 bg-primary">
-                    <asp:TextBox ID="txtMail" runat="server" class="form-control w-100"></asp:TextBox>
+                    <asp:TextBox ID="txtMail" runat="server" name="txtMail" class="form-control w-100"></asp:TextBox>
                 </div>
 
                 <div class="col-sm-4 bg-success">
@@ -67,27 +67,63 @@
                 </div>
 
                 
-                <%-- REGEX --%>
+                <%-- PASSWORD --%>
 
                 <div class="col-sm-3 bg-info">
                     <asp:Label ID="lblPwd" runat="server" Text="Password: "></asp:Label>
                 </div>
 
                 <div class="col-sm-5 bg-primary">
-                    <asp:TextBox ID="txtPwd" runat="server" class="form-control w-100"></asp:TextBox>
+                    <asp:TextBox type="password" ID="txtPwd" name="txtPwd" runat="server" class="form-control w-100"></asp:TextBox>
+                </div>
+                <div class="col-sm-4 bg-success">
+                    .
                 </div>
 
                 
                 <div class="col-sm-3 bg-info">
-                    <asp:Label ID="lblPwd2" runat="server" Text="Conferma Password: "></asp:Label>
+                    <asp:Label ID="lblConfPwd" runat="server" Text="Conferma Password: "></asp:Label>
                 </div>
 
                 <div class="col-sm-5 bg-primary">
-                    <asp:TextBox ID="txtPwd2" runat="server" class="form-control w-100"></asp:TextBox>
+                    <asp:TextBox type="password" ID="txtConfPwd" runat="server" class="form-control w-100"></asp:TextBox>
                 </div>
 
                 <div class="col-sm-4 bg-success">
                     <asp:CompareValidator ID="CVPassword" runat="server" ErrorMessage="CompareValidator"></asp:CompareValidator>
+                </div>
+
+
+                <%-- Robot --%>
+                <div class="col-sm-3 bg-info">
+                    <asp:Label ID="lblRobot" runat="server" Text="Non sono un robot: "></asp:Label>
+                </div>
+
+                <div class="col-sm-5 bg-primary">
+                    <asp:TextBox ID="txtRobot" runat="server" name="txtRobot" class="form-control w-100"></asp:TextBox>
+                </div>
+                <div class="col-sm-4 bg-success">
+                    <asp:CompareValidator ID="CVRobot" runat="server" ErrorMessage="CompareValidator"></asp:CompareValidator>
+                </div>
+
+
+                <%-- CUSTOM --%>
+                                <div class="col-sm-3 bg-info">
+                    <asp:Label ID="lblCustom" runat="server" Text="Campo da 8 caratteri: "></asp:Label>
+                </div>
+
+                <div class="col-sm-5 bg-primary">
+                    <asp:TextBox ID="txtCustom" runat="server" name="txtCustom" class="form-control w-100"></asp:TextBox>
+                </div>
+                <div class="col-sm-4 bg-success">
+                    <asp:CustomValidator ID="CustVal" runat="server" ErrorMessage="CustomValidator" OnServerValidate="CustVal_ServerValidate"></asp:CustomValidator>
+                </div>
+
+
+
+                <%-- Validatio Summary --%>
+                <div class="mt-3 mb-3 bg-success">
+                    <asp:ValidationSummary ID="VS" runat="server" />
                 </div>
 
 

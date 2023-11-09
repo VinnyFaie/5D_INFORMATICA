@@ -29,6 +29,39 @@ namespace Validator
                 RVEta.Type = ValidationDataType.Integer;
                 RVEta.EnableClientScript = false;
                 RVEta.ForeColor = System.Drawing.Color.DarkRed;
+
+                // CompareValidator per PASSWORD
+                CVPassword.ControlToValidate = "txtConfPwd";
+                CVPassword.ControlToCompare = "txtPwd";
+                CVPassword.Operator = ValidationCompareOperator.Equal;
+                CVPassword.Type = ValidationDataType.String;
+                CVPassword.SetFocusOnError = true;
+                CVPassword.ErrorMessage = "Le due password inserite non coincidono!";
+                RVEta.EnableClientScript = false;
+                RVEta.ForeColor = System.Drawing.Color.DarkRed;
+
+                // CompareValidator ROBOT
+                CVRobot.ControlToValidate = "txtRobot";
+                CVRobot.ValueToCompare = "norobot";
+                CVRobot.Operator = ValidationCompareOperator.Equal;
+                CVRobot.Type = ValidationDataType.String;
+                CVRobot.SetFocusOnError = true;
+                CVRobot.ErrorMessage = "Il testo inserito non è corretto!";
+                RVEta.EnableClientScript = false;
+                RVEta.ForeColor = System.Drawing.Color.DarkRed;
+
+                //CUSTOM
+                CustVal.ControlToValidate = "txtCustom";
+                CustVal.SetFocusOnError = true;
+                CustVal.ErrorMessage = "il campo deve essere composto da almento 8 caratteri(char)!";
+                CustVal.ValidateEmptyText = true;
+                RVEta.EnableClientScript = false;
+                RVEta.ForeColor = System.Drawing.Color.DarkRed;
+
+                //VALIDATIONSUMMARY
+                VS.HeaderText = "Errori riscontrati nel form";
+                VS.DisplayMode = ValidationSummaryDisplayMode.BulletList;
+                VS.ShowMessageBox = true;
             }
         }
 
@@ -42,6 +75,18 @@ namespace Validator
             else
             {
                 lblErrore.Text = "Il form non è completo o ci sono errori di compilazione!";
+            }
+        }
+
+        protected void CustVal_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            if (args.Value.Length >= 8)
+            {
+                args.IsValid = true; //ho validato il controllo
+            }
+            else
+            {
+                args.IsValid = false;
             }
         }
     }
